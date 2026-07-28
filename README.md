@@ -6,7 +6,7 @@ Painel em tempo real do nível do rio Guaíba, previsão do tempo, pontos de apo
 ![next.js](https://img.shields.io/badge/Next.js-15-black)
 ![typescript](https://img.shields.io/badge/TypeScript-strict-3178C6)
 
-## Screenshots
+## Prévia do painel
 
 <p float="left">
   <img src="docs/foto1.png" width="45%" />
