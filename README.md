@@ -6,6 +6,17 @@ Painel em tempo real do nível do rio Guaíba, previsão do tempo, pontos de apo
 ![next.js](https://img.shields.io/badge/Next.js-15-black)
 ![typescript](https://img.shields.io/badge/TypeScript-strict-3178C6)
 
+## Screenshots
+
+<p float="left">
+  <img src="docs/foto1.png" width="45%" />
+  <img src="docs/foto2.png" width="45%" />
+</p>
+<p float="left">
+  <img src="docs/foto3.png" width="45%" />
+  <img src="docs/foto4.png" width="45%" />
+</p>
+
 ## O que o painel mostra
 
 - **Nível do Guaíba** — leitura atual, tendência (subindo/descendo) e
