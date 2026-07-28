@@ -1,0 +1,50 @@
+[
+  {
+    "id": "defesa-civil-poa-emergencia",
+    "nome": "Defesa Civil de Porto Alegre — Emergência",
+    "telefone": "199",
+    "telefoneExibicao": "199",
+    "descricao": "Alagamento, enxurrada, enchente, desabamento, destelhamento, queda de muro ou árvore.",
+    "disponibilidade": "24h, todos os dias"
+  },
+  {
+    "id": "corpo-de-bombeiros",
+    "nome": "Corpo de Bombeiros Militar",
+    "telefone": "193",
+    "telefoneExibicao": "193",
+    "descricao": "Incêndio, resgate e emergências que ofereçam risco à vida.",
+    "disponibilidade": "24h, todos os dias"
+  },
+  {
+    "id": "brigada-militar",
+    "nome": "Brigada Militar (RS)",
+    "telefone": "190",
+    "telefoneExibicao": "190",
+    "descricao": "Emergências policiais e de segurança pública.",
+    "disponibilidade": "24h, todos os dias"
+  },
+  {
+    "id": "defesa-civil-poa-atendimento",
+    "nome": "Defesa Civil de Porto Alegre — Atendimento",
+    "telefone": "1132890199",
+    "telefoneExibicao": "(51) 3289-0199",
+    "descricao": "Canal direto de atendimento da Defesa Civil municipal (não emergencial).",
+    "disponibilidade": "Horário comercial"
+  },
+  {
+    "id": "156-central-poa",
+    "nome": "156 — Central de Atendimento da Prefeitura de POA",
+    "telefone": "156",
+    "telefoneExibicao": "156",
+    "descricao": "Serviços gerais da prefeitura; também encaminha emergências da Defesa Civil pela opção correspondente.",
+    "disponibilidade": "24h, todos os dias"
+  },
+  {
+    "id": "alertas-whatsapp-defesa-civil",
+    "nome": "Alertas por WhatsApp/SMS — Defesa Civil POA",
+    "telefone": "5551934330156",
+    "telefoneExibicao": "(51) 3433-0156",
+    "descricao": "Salve este número e mande mensagem para receber alertas de risco diretamente no celular.",
+    "disponibilidade": "Cadastro via WhatsApp"
+  }
+]

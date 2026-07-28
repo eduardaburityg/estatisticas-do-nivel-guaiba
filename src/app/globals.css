@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  /* ---- Color tokens ---- */
+  --bg: #0a141f;
+  --bg-deep: #060c14;
+  --surface: #101f2e;
+  --surface-raised: #16283a;
+  --border: rgba(231, 238, 243, 0.09);
+  --border-strong: rgba(231, 238, 243, 0.16);
+
+  --text: #e7eef3;
+  --text-muted: #7c93a3;
+  --text-faint: #4d6272;
+
+  --water: #2e93c7;
+  --water-bright: #5cb8e8;
+  --water-deep: #163650;
+
+  --status-normal: #3fb88a;
+  --status-normal-dim: rgba(63, 184, 138, 0.14);
+  --status-alerta: #e8a33d;
+  --status-alerta-dim: rgba(232, 163, 61, 0.14);
+  --status-critico: #e15b5b;
+  --status-critico-dim: rgba(225, 91, 91, 0.14);
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.river-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(46, 147, 199, 0.16), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 100%, rgba(46, 147, 199, 0.08), transparent),
+    var(--bg);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.data-readout {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+::selection {
+  background: var(--water);
+  color: var(--bg-deep);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--water-bright);
+  outline-offset: 2px;
+}
+
+.form-field {
+  border-color: var(--water);
+  transition: all 0.15s ease;
+}
+
+.form-field:hover {
+  border-color: var(--water-bright);
+}
+
+.form-field:focus {
+  outline: none;
+  border-color: var(--water-bright);
+  box-shadow: 0 0 0 3px rgba(92, 184, 232, 0.25);
+}
+
+.btn-primary {
+  transition: all 0.15s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  filter: brightness(1.15);
+  transform: scale(1.02);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: scale(0.98);
+}
