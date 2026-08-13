@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { ChatBubble } from "@/components/ChatBubble";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <div className="river-backdrop" />
         {children}
+        <ChatBubble />
       </body>
     </html>
   );

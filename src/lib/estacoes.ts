@@ -19,6 +19,12 @@ export interface ConfigEstacao {
  * inundação) até serem confirmadas com a Defesa Civil de cada município —
  * ver README antes de divulgar publicamente.
  *
+ * Porto Alegre tem duas réguas no Guaíba, cada uma com seu próprio "zero"
+ * de referência — por isso não são comparáveis em metros, só em % da cota
+ * (ver NotaDuasReguas.tsx). A estação 87450020 é a Usina do Gasômetro, não
+ * o Cais Mauá (código 87450004) — rótulo corrigido após checagem cruzada
+ * com o nivelguaiba.com.br.
+ *
  * Nem todo rio monitorado deságua direto no Guaíba: Jacuí, Sinos, Caí e
  * Gravataí chegam diretamente; o Taquari deságua no Delta do Jacuí, que só
  * depois alcança o Guaíba. Os percentuais de contribuição de volume
@@ -27,15 +33,30 @@ export interface ConfigEstacao {
  * sua contribuição já é contabilizada indiretamente através do Jacuí.
  */
 
-export const ESTACAO_GUAIBA: ConfigEstacao = {
+export const ESTACAO_GASOMETRO: ConfigEstacao = {
   codigo: "87450020",
-  nome: "Cais Mauá",
+  nome: "Usina do Gasômetro",
   rio: "Guaíba",
   municipio: "Porto Alegre",
-  cotaAtencaoMetros: 2.0,
+  cotaAtencaoMetros: 2.08,
   cotaInundacaoMetros: 2.6,
   relacaoComGuaiba: "direto",
 };
+
+export const ESTACAO_CAIS_MAUA: ConfigEstacao = {
+  codigo: "87450004",
+  nome: "Cais Mauá C6",
+  rio: "Guaíba",
+  municipio: "Porto Alegre",
+  cotaAtencaoMetros: 2.4,
+  cotaInundacaoMetros: 3.0,
+  relacaoComGuaiba: "direto",
+};
+
+export const ESTACOES_PORTO_ALEGRE: ConfigEstacao[] = [ESTACAO_GASOMETRO, ESTACAO_CAIS_MAUA];
+
+/** @deprecated use ESTACOES_PORTO_ALEGRE — mantido para compatibilidade com buscarNivelGuaiba(). */
+export const ESTACAO_GUAIBA = ESTACAO_GASOMETRO;
 
 export const ESTACOES_AFLUENTES: ConfigEstacao[] = [
   { codigo: "85400000", nome: "Dona Francisca", rio: "Jacuí", municipio: "Dona Francisca", cotaAtencaoMetros: 6.4, cotaInundacaoMetros: 7.5, relacaoComGuaiba: "direto", contribuicaoPercentual: 84.6 },

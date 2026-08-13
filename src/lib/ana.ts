@@ -1,6 +1,6 @@
 import { XMLParser } from "fast-xml-parser";
 import type { LeituraNivel, NivelEstacao, StatusRio } from "./types";
-import { ESTACAO_GUAIBA, ESTACOES_AFLUENTES, type ConfigEstacao } from "./estacoes";
+import { ESTACAO_GUAIBA, ESTACOES_AFLUENTES, ESTACOES_PORTO_ALEGRE, type ConfigEstacao } from "./estacoes";
 
 const ANA_ENDPOINT =
   "http://telemetriaws1.ana.gov.br/ServiceANA.asmx/DadosHidrometeorologicos";
@@ -182,6 +182,13 @@ export async function buscarNivelEstacao(
 export async function buscarNivelGuaiba(): Promise<NivelEstacao> {
   const resultado = await buscarNivelEstacao(ESTACAO_GUAIBA, { permitirDemonstracao: true });
   return resultado as NivelEstacao;
+}
+
+export async function buscarNiveisPortoAlegre(): Promise<NivelEstacao[]> {
+  const resultados = await Promise.all(
+    ESTACOES_PORTO_ALEGRE.map((config) => buscarNivelEstacao(config, { permitirDemonstracao: true }))
+  );
+  return resultados.filter((r): r is NivelEstacao => r !== null);
 }
 
 export async function buscarNiveisAfluentes(): Promise<NivelEstacao[]> {

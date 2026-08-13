@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
-import { buscarNivelGuaiba } from "@/lib/ana";
+import { buscarNiveisPortoAlegre, buscarNiveisAfluentes } from "@/lib/ana";
 
 export async function GET() {
-  const dados = await buscarNivelGuaiba();
-  return NextResponse.json(dados);
+  const [portoAlegre, afluentes] = await Promise.all([
+    buscarNiveisPortoAlegre(),
+    buscarNiveisAfluentes(),
+  ]);
+  return NextResponse.json({ portoAlegre, afluentes });
 }

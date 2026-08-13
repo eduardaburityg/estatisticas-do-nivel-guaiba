@@ -32,7 +32,9 @@ export function SiteHeader({ status }: { status: NivelGuaiba["status"] }) {
           <Waves size={18} style={{ color: "var(--water-bright)" }} />
         </span>
         <div>
-          <p className="font-display text-lg font-semibold leading-tight">Estatísticas do Nível do Guaíba</p>
+          <p className="font-display text-lg font-semibold leading-tight">
+            Estatísticas do Nível do Guaíba
+          </p>
           <p className="text-xs" style={{ color: "var(--text-faint)" }}>
             Monitor do nível do rio, clima e pontos de apoio no RS
           </p>

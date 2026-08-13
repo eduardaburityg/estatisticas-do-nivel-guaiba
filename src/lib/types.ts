@@ -65,3 +65,25 @@ export interface PontoApoio {
   latitude: number;
   longitude: number;
 }
+
+export type TipoSolicitacao = "pedido" | "oferta";
+export type StatusSolicitacao = "pendente" | "aprovado" | "concluido";
+
+export interface SolicitacaoAjuda {
+  id: string;
+  tipo: TipoSolicitacao;
+  nome: string;
+  cidade: string;
+  bairro: string | null;
+  categoria: string;
+  descricao: string | null;
+  telefone: string | null;
+  status: StatusSolicitacao;
+  created_at: string;
+}
+
+export type NovaSolicitacaoAjuda = Pick<
+  SolicitacaoAjuda,
+  "tipo" | "nome" | "cidade" | "categoria"
+> &
+  Partial<Pick<SolicitacaoAjuda, "bairro" | "descricao" | "telefone">>;
