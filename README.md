@@ -10,16 +10,9 @@ Painel em tempo real do nível do rio Guaíba, previsão do tempo, pontos de apo
 ## Prévia do painel
 
 <p float="left">
-  <img src="docs/foto1.png" width="45%" />
-  <img src="docs/foto2.png" width="45%" />
+  <img src="docs/foto2-mobile.png" width="45%" />
+  <img src="docs/foto-mobile.png" width="45%" />
 </p>
-<p float="left">
-  <img src="docs/foto3.png" width="45%" />
-  <img src="docs/foto4.png" width="45%" />
-</p>
-
-> As screenshots acima são de antes da reorganização em abas — a estrutura
-> atual de navegação está descrita abaixo.
 
 ## Navegação
 
